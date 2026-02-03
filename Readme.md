@@ -1,6 +1,6 @@
 # SquirrelCast App, Manuals, and Tools
 
-**SquirrelCast** is an Android smartphone-based video-out solution for newer DJI goggles (anything compatible with **O3** and **O4**).
+SquirrelCast is an Android smartphone-based video-out solution for newer DJI goggles (anything compatible with **O3** and **O4**).
 
 ## What SquirrelCast Does
 
@@ -12,7 +12,7 @@
 - Stream live video over your local network to other devices:
   - Share to a web browser via **WebRTC**, no additional software needed
   - Share via **RTSP** to third-party apps such as **VLC**, and ground stations such as **ArduPilot Mission Planner**
-- (Goggles 3 and N3 only) Configure the goggles’ Wi-Fi and use **SquirrelReceiver** to stream directly from the goggles to a Windows PC over Wi-Fi, no app in between
+- (DJI Goggles 3 and DJI Goggles N3 only) Configure the goggles’ Wi-Fi and use **SquirrelReceiver** to stream directly from the goggles to a Windows PC over Wi-Fi, no app in between
 
 ## Get the App
 
@@ -20,8 +20,8 @@
 
 <img src="app-QR.png" alt="SquirrelCast QR Code" width="200">
 
-
 ## Manuals
+
 - [Connecting to the Goggles](manuals/connecting-to-the-goggles.md)
 
 - [Using Live View](manuals/using-live-view.md)
@@ -32,8 +32,8 @@
 - [Streaming Video Over Wi-Fi](manuals/streaming-over-wifi.md)
   - [Stream to a browser (WebRTC)](manuals/streaming-over-wifi.md#stream-to-a-browser-webrtc)
   - [Stream to third-party apps (RTSP)](manuals/streaming-over-wifi.md#stream-to-third-party-apps-rtsp)
-  - [Set up Live Video in Mission Planner](manuals/streaming-over-wifi.md#Set-up-Live-Video-in-ArduPilot-Mission-Planner)
-  - [Stream directly from goggles to Windows using SquirrelReceiver](manuals/streaming-over-wifi.md#stream-directly-from-goggles-to-windows-using-squirrelreceiver)
+  - [Set up Live Video in Mission Planner](manuals/streaming-over-wifi.md#set-up-live-video-in-ardupilot-mission-planner)
+  - [Stream directly from goggles to Windows using SquirrelReceiver](manuals/streaming-over-wifi.md#stream-directly-from-the-goggles-to-windows-using-squirrelreceiver)
 
 - [Telemetry Logging](manuals/telemetry-logging.md)
 

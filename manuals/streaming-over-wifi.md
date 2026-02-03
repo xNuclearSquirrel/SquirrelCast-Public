@@ -4,17 +4,17 @@ The main feature of SquirrelCast is video streaming over a local Wi-Fi network. 
 
 SquirrelCast offers two main streaming paths:
 - **Stream to a browser** directly via **WebRTC**
-- **Stream to eternal apps** via **RTSP**
+- **Stream to third-party apps** via **RTSP**
 
 There is also a third option for newer goggles:
-- **Stream directly from the goggles to Windows** using the goggles’ built-in Wi-Fi sharing.
+- **Stream directly from the goggles to Windows** using the goggles’ built-in Wi-Fi sharing  
   This only requires SquirrelCast for the initial setup, then it works without the app.
 
 ## Stream to a browser (WebRTC)
 
 This is the default streaming option.
 
-Once live video is received in the Player, tap **Start Streaming** to enable streaming.
+Once live video is received in the **Player**, tap **Start Streaming** to enable streaming.
 
 <img src="images/start-streaming.png" alt="Start Streaming button" width="22%" />
 
@@ -33,7 +33,7 @@ To view the stream, any device on the same Wi-Fi network can open a browser and 
 > - If you change network settings on the streaming phone, the stream needs to be restarted.
 > - Sometimes the receiver can time out, if that happens, simply reload the page.
 
-There will be a notification showing you the status of the stream and number of connected viewers, it also contains a button to turn the stream off. 
+A foreground notification shows the stream status and the number of connected viewers. It also contains a button to turn the stream off.
 
 ## Stream to third-party apps (RTSP)
 
@@ -52,9 +52,9 @@ Depending on the app used to receive the RTSP stream, a specific launch command 
 
 ### Set up Live Video in ArduPilot Mission Planner
 
-1. Make sure you are in the same local network as the phone.
+1. Make sure you are on the same local network as the phone.
 2. Open Mission Planner.
-3. Right click the HUD and select **Video** → **Set Gstreamer Source**.
+3. Right-click the HUD and select **Video** → **Set Gstreamer Source**.
 4. In the window that opens, paste the command preset for Mission Planner from the SquirrelCast Streaming tab.
 
 <p float="left">
@@ -63,7 +63,7 @@ Depending on the app used to receive the RTSP stream, a specific launch command 
   <img src="images/source-url.png" alt="Paste the Gstreamer source command into the dialog" width="35%" />
 </p>
 
-4. Press **OK**. After a few seconds, the video should appear automatically.
+5. Press **OK**. After a few seconds, the video should appear automatically.
 
 <img src="images/gstreamer-video.png" alt="Gstreamer video shown in Mission Planner" width="75%" />
 
@@ -86,7 +86,7 @@ If you want a clean video feed (without MSP OSD), turn off overlays in the goggl
 SquirrelReceiver can be downloaded from its GitHub releases page:  
 https://github.com/xNuclearSquirrel/SquirrelReceiver
 
->Note: Currently only works with Goggles 3 (might also work with N3, I haven't been able to test that yet).
+> **Note:** Currently only works with DJI Goggles 3 (it might also work with DJI Goggles N3, but this has not been tested yet).
 
 ### Install and unlock SquirrelReceiver
 

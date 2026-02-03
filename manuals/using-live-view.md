@@ -1,17 +1,18 @@
 # Using Live View
 
+## Opening Live View
 
 1. Open the navigation menu (button at the top left).
 2. Select the **Player** tab to bring up the live video screen.
 
 <p float="left">
-  <img src="images/drawer-liveview.png" alt="Open the drawer and locate the Live View tab" width="22%" />
+  <img src="images/drawer-liveview.png" alt="Open the drawer and locate the Player tab" width="22%" />
   <img src="images/liveview.png" alt="Live View screen" width="22%" />
 </p>
 
 ## Recording video and audio
 
-To start or stop recording, press the **Record** button in the top right. It will record the live view on our phone and save it to `Movies/SquirrelCast`. To add an audio track see [Additional options](using-live-view.md#additional-options)
+To start or stop recording, press the **Record** button in the top right. It will record the live view on your phone and save it to `Movies/SquirrelCast`. To add an audio track, see [Additional options](#additional-options).
 
 <img src="images/liveview-record.png" alt="Record button in the Player tab" width="22%" />
 
@@ -43,7 +44,7 @@ These include:
 Changing these will directly affect the camera settings of the drone or air unit.
 
 <p float="left">
-  <img src="images/settings.png" alt="Settings icon in the Player tab" width="22%" />
+  <img src="images/settings.png" alt="Camera settings icon in the Player tab" width="22%" />
   <img src="images/settings-half.png" alt="Settings menu partially expanded" width="22%" />
   <img src="images/settings-full.png" alt="Settings menu fully expanded" width="22%" />
 </p>
@@ -64,10 +65,10 @@ When enabled, SquirrelCast will automatically start recording in the app wheneve
 
 This is useful if your goggles are set to auto record on arm, because SquirrelCast will also start recording on arm, as long as the air unit actually starts recording.
 
-> Note: SquirrelCast will also stop recording automatically when the air unit stops recording, so keep that in mind. 
+> **Note:** SquirrelCast will also stop recording automatically when the air unit stops recording, so keep that in mind.
 
 ### Record phone audio
 
 Records your phone’s microphone audio during a Live View recording and stores it either as an audio track in the video, or as a separate audio file in `Music/SquirrelCast`. This feature is great for adding commentary during a flight but also generally makes footage more interesting.
 
-> Note: Requires microphone permission.
+> **Note:** Requires microphone permission.
