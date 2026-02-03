@@ -45,7 +45,7 @@
 
 ## Credits
 
-- Thanks to Joonas for the help when developing this!
+- Thanks to Joonas for the help when developing this! And of course, thanks to my testers who volunteered to test the app during development and offered much valuable feedback and suggestions!
 
 ## Support the Project 💖
 
