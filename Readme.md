@@ -1,4 +1,3 @@
-```markdown
 # SquirrelCast App, Manuals, and Tools
 
 **SquirrelCast** is an Android smartphone-based video-out solution for newer DJI goggles (anything compatible with **O3** and **O4**).
@@ -57,4 +56,3 @@ This repository contains manuals and additional tools for SquirrelCast.
 If you find this project useful, consider donating to support development!
 
 [![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/donate/?hosted_button_id=BSA49E6J5DLM4)
-```
