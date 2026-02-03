@@ -91,10 +91,10 @@ https://github.com/xNuclearSquirrel/SquirrelReceiver
 
 <img src="images/unlock.png" alt="Unlock SquirrelReceiver by scanning the QR code in SquirrelCast" width="22%" />
 
-### Configure goggles Wi-Fi
+### Configure goggles’ Wi-Fi
 
 1. Connect SquirrelCast to the goggles.
-2. In SquirrelCast, open the **Utilities** tab and configure the goggles Wi-Fi network (or leave the default network, but note down the password).
+2. In SquirrelCast, open the **Utilities** tab and configure the goggles’ Wi-Fi network (or leave the default network, but note down the password).
 
 <img src="images/wifi-settings.png" alt="Configure goggles Wi-Fi settings from the Utilities tab" width="22%" />
 
@@ -106,12 +106,28 @@ On the goggles, enable Live View sharing (pull down on the 5-position stick and 
   <img src="images/share-liveview.png" alt="Enable Live View sharing on the goggles" width="60%" />
 </p>
 
-### Connect Windows to the goggles Wi-Fi
+### Connect Windows to the goggles’ Wi-Fi
 
-1. On the Windows PC, connect to the goggles Wi-Fi network.
+1. On the Windows PC, connect to the goggles’ Wi-Fi network.
 2. The stream should start automatically in SquirrelReceiver.
 
 <p float="left">
-  <img src="images/wifi-connect.png" alt="Connect Windows to the goggles Wi-Fi network" width="20%" />
+  <img src="images/wifi-connect.png" alt="Connect Windows to the goggles’ Wi-Fi network" width="25%" />
   <img src="images/squirrelreceiver.png" alt="SquirrelReceiver receiving the live stream" width="60%" />
 </p>
+
+## Additional settings
+
+### Custom ports
+
+You can change the default network ports used for the WebRTC and RTSP streams in the app settings. This can be useful if you have port conflicts on your network or want to standardize ports across devices.
+
+<img src="images/ports.png" alt="Custom ports settings for WebRTC and RTSP" width="22%" />
+
+### mDNS (squirrel.local)
+
+If mDNS is enabled, the streams are broadcast under the URL **squirrel.local**, so you can use that instead of typing the IP address.
+
+<img src="images/mDNS.png" alt="mDNS setting to enable squirrel.local discovery" width="22%" />
+
+> **Note:** mDNS only works on real Wi-Fi networks with a router, not with phone Wi-Fi hotspots.
