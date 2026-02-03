@@ -41,7 +41,7 @@
 
 ## Additional Tools
 
-- _Coming soon_
+- _Coming soon: A tool to parse telemetry logs._
 
 ## Credits
 
