@@ -72,6 +72,6 @@ If you want a clean video feed (without MSP OSD), turn off overlays in the goggl
 **Settings** → **Camera** → **Additional Camera Settings** → **Camera View Recording** → **Off**.
 
 <p float="left">
-  <img src="images/camera-view-recording.png" alt="Goggles setting: Camera View Recording" width="25%" />
-  <img src="images/clean-gstreamer-video.png" alt="Clean video feed in Mission Planner" width="35%" />
+  <img src="images/camera-view-recording.png" alt="Goggles setting: Camera View Recording" width="35%" />
+  <img src="images/clean-gstreamer-video.png" alt="Clean video feed in Mission Planner" width="60%" />
 </p>
