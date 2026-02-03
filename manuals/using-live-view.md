@@ -50,3 +50,40 @@ Changing these will directly affect the camera settings of the drone or air unit
 </p>
 
 ## Additional options
+
+There are a few optional features hidden in the app settings.
+
+1. Open the main navigation menu.
+2. Go to **Settings**.
+3. Scroll down to **Additional settings**.
+
+<img src="images/additional-options.png" alt="Additional options in settings" width="22%" />
+
+### Auto record
+
+When enabled, SquirrelCast will automatically start recording in the app whenever the air unit or drone starts recording.
+
+This is useful if your goggles are set to auto record on arm, because SquirrelCast will also start recording on arm, as long as the air unit actually starts recording.
+
+Notes:
+- This only works if the drone or air unit is actually recording.
+- If the air unit does not start recording (for example because the SD card is full), SquirrelCast will not start recording either.
+- SquirrelCast will also stop recording automatically when the air unit stops recording, keep that in mind.
+
+### Telemetry logging
+
+Creates a CSV file with telemetry parameters received from the goggles. You can set the logging interval in the settings.
+
+This is mostly interesting for DJI drones (for example Avata), which can send lots of data like GPS position, speed, altitude, and battery stats. It is usually less interesting for air units, which mostly send camera parameters.
+
+> Note: In the future, the goal is to connect ELRS telemetry to the app and add more features around tracking and telemetry logging.
+
+### Record phone audio
+
+Requires microphone permission.
+
+Records your phone’s microphone audio during a Live View recording and stores it either:
+- as an audio track in the video, or
+- as a separate audio file
+
+This is great for adding commentary during a flight and generally makes footage more interesting.
