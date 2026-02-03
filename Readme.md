@@ -32,6 +32,7 @@
 - [Streaming Video Over Wi-Fi](manuals/streaming-over-wifi.md)
   - [Stream to a browser (WebRTC)](manuals/streaming-over-wifi.md#stream-to-a-browser-webrtc)
   - [Stream to third-party apps (RTSP)](manuals/streaming-over-wifi.md#stream-to-third-party-apps-rtsp)
+  - [Set up Live Video in Mission Planner](manuals/streaming-over-wifi.md#Set-up-Live-Video-in-ArduPilot-Mission-Planner)
   - [Stream directly from goggles to Windows using SquirrelReceiver](manuals/streaming-over-wifi.md#stream-directly-from-goggles-to-windows-using-squirrelreceiver)
 
 - [Telemetry Logging](manuals/telemetry-logging.md)

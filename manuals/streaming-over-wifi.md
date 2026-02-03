@@ -4,10 +4,10 @@ The main feature of SquirrelCast is video streaming over a local Wi-Fi network. 
 
 SquirrelCast offers two main streaming paths:
 - **Stream to a browser** directly via **WebRTC**
-- **Stream to third-party apps** via **RTSP**
+- **Stream to eternal apps** via **RTSP**
 
 There is also a third option for newer goggles:
-- **Stream directly from the goggles to Windows** using the goggles’ built-in Wi-Fi sharing  
+- **Stream directly from the goggles to Windows** using the goggles’ built-in Wi-Fi sharing.
   This only requires SquirrelCast for the initial setup, then it works without the app.
 
 ## Stream to a browser (WebRTC)
@@ -33,6 +33,8 @@ To view the stream, any device on the same Wi-Fi network can open a browser and 
 > - If you change network settings on the streaming phone, the stream needs to be restarted.
 > - Sometimes the receiver can time out, if that happens, simply reload the page.
 
+There will be a notification showing you the status of the stream and number of connected viewers, it also contains a button to turn the stream off. 
+
 ## Stream to third-party apps (RTSP)
 
 Streaming via RTSP is off by default and needs to be enabled in the settings first.
@@ -48,7 +50,7 @@ Depending on the app used to receive the RTSP stream, a specific launch command 
   <img src="images/launch-command.png" alt="Launch commands presets for RTSP apps" width="22%" />
 </p>
 
-### Set up ArduPilot Mission Planner
+### Set up Live Video in ArduPilot Mission Planner
 
 1. Open Mission Planner.
 2. Right click the HUD and select **Video** → **Set Gstreamer Source**.

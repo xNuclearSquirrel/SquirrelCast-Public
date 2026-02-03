@@ -1,6 +1,5 @@
 # Using Live View
 
-## Opening Live View
 
 1. Open the navigation menu (button at the top left).
 2. Select the **Player** tab to bring up the live video screen.
@@ -12,7 +11,7 @@
 
 ## Recording video and audio
 
-To start or stop recording, press the **Record** button in the top right. It will create a video recording and save it in `Movies/SquirrelCast`. To add an audio track see [Additional options](using-live-view.md#additional-options)
+To start or stop recording, press the **Record** button in the top right. It will record the live view on our phone and save it to `Movies/SquirrelCast`. To add an audio track see [Additional options](using-live-view.md#additional-options)
 
 <img src="images/liveview-record.png" alt="Record button in the Player tab" width="22%" />
 
@@ -30,7 +29,7 @@ You can also start or stop recording from the Android foreground notification. I
 
 ## Changing camera settings
 
-Tap the **Settings** icon in the bottom right. This opens a menu where you can set the recording parameters of the air unit directly.
+Tap the **Camera Settings** icon in the bottom right. This opens a menu where you can set the recording parameters of the air unit or DJI drone directly.
 
 These include:
 - ISO
@@ -65,10 +64,10 @@ When enabled, SquirrelCast will automatically start recording in the app wheneve
 
 This is useful if your goggles are set to auto record on arm, because SquirrelCast will also start recording on arm, as long as the air unit actually starts recording.
 
-> Note: SquirrelCast will also stop recording automatically when the air unit stops recording, keep that in mind.
+> Note: SquirrelCast will also stop recording automatically when the air unit stops recording, so keep that in mind. 
 
 ### Record phone audio
 
 Records your phone’s microphone audio during a Live View recording and stores it either as an audio track in the video, or as a separate audio file in `Music/SquirrelCast`. This feature is great for adding commentary during a flight but also generally makes footage more interesting.
 
-> Note:Requires microphone permission.
+> Note: Requires microphone permission.
