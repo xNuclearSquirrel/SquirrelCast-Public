@@ -28,7 +28,47 @@ To view the stream, any device on the same Wi-Fi network can open a browser and 
 > **Notes**
 >
 > - In the field, when no Wi-Fi network is available, a Wi-Fi hotspot created by the streaming phone will work as well.
-> - Stream quality depends on network quality. On newer phones it is usually good enough, but on older phones the stream can contain stutters and glitches due to network jitter and packet loss.
+> - Stream quality depends on network quality. On newer phones the hotspot is usually good enough, but on older phones the stream can contain stutters and glitches due to network jitter and packet loss.
 > - Putting the phone into flight mode to prevent other traffic can help (as long as Wi-Fi stays enabled).
 > - If you change network settings on the streaming phone, the stream needs to be restarted.
 > - Sometimes the receiver can time out, if that happens, simply reload the page.
+
+## Stream to third-party apps (RTSP)
+
+Streaming via RTSP is off by default and needs to be enabled in the settings first.
+
+<img src="images/RTSP-settigns.png" alt="RTSP setting toggle in app settings" width="22%" />
+
+Once enabled, the RTSP URL will be shown on the Streaming tab.
+
+Depending on the app used to receive the RTSP stream, a specific launch command might be needed. SquirrelCast provides commands for a few apps, and users can add more in the settings.
+
+<img src="images/launch-commands.png" alt="Launch commands presets for RTSP apps" width="22%" />
+
+### Set up ArduPilot Mission Planner
+
+1. Open Mission Planner.
+2. Right click the HUD and select **Video** → **Set Gstreamer Source**.
+3. In the window that opens, paste the command preset for Mission Planner from the SquirrelCast Streaming tab.
+
+<p float="left">
+  <img src="images/mission-planner-command.png" alt="Mission Planner preset command shown in SquirrelCast" width="22%" />
+  <img src="images/set-source.png" alt="Mission Planner menu: Video to Set Gstreamer Source" width="35%" />
+  <img src="images/source-url.png" alt="Paste the Gstreamer source command into the dialog" width="35%" />
+</p>
+
+4. Press **OK**. After a few seconds, the video should appear automatically.
+
+<img src="images/gstreamer-video.png" alt="Gstreamer video shown in Mission Planner" width="75%" />
+
+> **Note:** If the image looks distorted, right click the video and adjust the aspect ratio.
+
+### Clean video feed (no MSP OSD)
+
+If you want a clean video feed (without MSP OSD), turn off overlays in the goggles:
+**Settings** → **Camera** → **Additional Camera Settings** → **Camera View Recording** → **Off**.
+
+<p float="left">
+  <img src="images/camera-view-recording.png" alt="Goggles setting: Camera View Recording" width="25%" />
+  <img src="images/clean-gstreamer-video.png" alt="Clean video feed in Mission Planner" width="35%" />
+</p>
