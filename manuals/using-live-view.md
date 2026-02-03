@@ -12,7 +12,7 @@
 
 ## Recording video and audio
 
-To start or stop recording, press the **Record** button in the top right. It will create a video recording and save it in Movies/SquirrelCast. To add an audio track see [Additional options](using-live-view.md#additional-options)
+To start or stop recording, press the **Record** button in the top right. It will create a video recording and save it in `Movies/SquirrelCast`. To add an audio track see [Additional options](using-live-view.md#additional-options)
 
 <img src="images/liveview-record.png" alt="Record button in the Player tab" width="22%" />
 
@@ -69,6 +69,6 @@ This is useful if your goggles are set to auto record on arm, because SquirrelCa
 
 ### Record phone audio
 
-Records your phone’s microphone audio during a Live View recording and stores it either as an audio track in the video, or as a separate audio file in Music/SquirrelCast. This feature is great for adding commentary during a flight but also generally makes footage more interesting.
+Records your phone’s microphone audio during a Live View recording and stores it either as an audio track in the video, or as a separate audio file in `Music/SquirrelCast`. This feature is great for adding commentary during a flight but also generally makes footage more interesting.
 
 > Note:Requires microphone permission.
