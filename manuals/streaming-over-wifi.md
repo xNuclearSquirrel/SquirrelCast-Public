@@ -103,7 +103,7 @@ https://github.com/xNuclearSquirrel/SquirrelReceiver
 On the goggles, enable Live View sharing (pull down on the 5-position stick and enable Live View sharing).
 
 <p align="center">
-  <img src="images/liveview-sharing.png" alt="Enable Live View sharing on the goggles" width="60%" />
+  <img src="images/share-liveview.png" alt="Enable Live View sharing on the goggles" width="60%" />
 </p>
 
 ### Connect Windows to the goggles Wi-Fi
