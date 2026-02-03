@@ -52,9 +52,10 @@ Depending on the app used to receive the RTSP stream, a specific launch command 
 
 ### Set up Live Video in ArduPilot Mission Planner
 
-1. Open Mission Planner.
-2. Right click the HUD and select **Video** → **Set Gstreamer Source**.
-3. In the window that opens, paste the command preset for Mission Planner from the SquirrelCast Streaming tab.
+1. Make sure you are in the same local network as the phone.
+2. Open Mission Planner.
+3. Right click the HUD and select **Video** → **Set Gstreamer Source**.
+4. In the window that opens, paste the command preset for Mission Planner from the SquirrelCast Streaming tab.
 
 <p float="left">
   <img src="images/mission-planner-command.png" alt="Mission Planner preset command shown in SquirrelCast" width="22%" />
@@ -84,6 +85,8 @@ If you want a clean video feed (without MSP OSD), turn off overlays in the goggl
 
 SquirrelReceiver can be downloaded from its GitHub releases page:  
 https://github.com/xNuclearSquirrel/SquirrelReceiver
+
+>Note: Currently only works with Goggles 3 (might also work with N3, I haven't been able to test that yet).
 
 ### Install and unlock SquirrelReceiver
 
