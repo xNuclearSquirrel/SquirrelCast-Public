@@ -3,7 +3,6 @@ const exportButton = document.getElementById("exportKml");
 const resetButton = document.getElementById("reset");
 const statusEl = document.getElementById("status");
 const statsEl = document.getElementById("stats");
-const tooltip = document.getElementById("tooltip");
 
 const map = L.map("map", { zoomControl: true }).setView([0, 0], 2);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -13,6 +12,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 let polyline = null;
 let hoverMarker = null;
+let hoverTooltip = null;
 let points = [];
 
 const columnKeys = {
@@ -20,6 +20,7 @@ const columnKeys = {
   lonDeg: "flight.osd.lon_deg",
   latRad: "flight.osd.lat_rad",
   lonRad: "flight.osd.lon_rad",
+  gpsUsed: "flight.osd.gps_used",
   alt: "flight.osd.rel_h_m",
   altHome: "flight.home.alt_m",
   batterySoc: "battery.dynamic.soc",
@@ -28,10 +29,19 @@ const columnKeys = {
   homeLonDeg: "flight.home.lon_deg",
   homeLatRad: "flight.home.lat_rad",
   homeLonRad: "flight.home.lon_rad",
+  homepointSet: "flight.home.homepoint_set",
   timestamp: "timestamp",
 };
 
 const toDegrees = (radians) => (Number.isFinite(radians) ? (radians * 180) / Math.PI : null);
+const parseBoolean = (value) => {
+  if (value === true || value === 1) return true;
+  if (typeof value === "string") {
+    const normalized = value.trim().toLowerCase();
+    return normalized === "true" || normalized === "1";
+  }
+  return false;
+};
 
 const formatSoc = (value) => {
   if (!Number.isFinite(value)) return "—";
@@ -77,7 +87,6 @@ const resetState = () => {
   statsEl.textContent = "";
   exportButton.disabled = true;
   resetButton.disabled = true;
-  tooltip.hidden = true;
 
   if (polyline) {
     map.removeLayer(polyline);
@@ -86,6 +95,10 @@ const resetState = () => {
   if (hoverMarker) {
     map.removeLayer(hoverMarker);
     hoverMarker = null;
+  }
+  if (hoverTooltip) {
+    map.removeLayer(hoverTooltip);
+    hoverTooltip = null;
   }
 };
 
@@ -98,9 +111,17 @@ const updateSummary = (meta) => {
 };
 
 const createKml = (trackPoints) => {
+  const hasAltitude = trackPoints.some((point) => Number.isFinite(point.alt));
   const coordinates = trackPoints
-    .map((point) => `${point.lon},${point.lat},${point.alt ?? 0}`)
+    .map((point) => {
+      if (!hasAltitude) {
+        return `${point.lon},${point.lat}`;
+      }
+      return `${point.lon},${point.lat},${Number.isFinite(point.alt) ? point.alt : 0}`;
+    })
     .join(" ");
+
+  const altitudeMode = hasAltitude ? "relativeToGround" : "clampToGround";
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
@@ -116,7 +137,7 @@ const createKml = (trackPoints) => {
       </Style>
       <LineString>
         <tessellate>1</tessellate>
-        <altitudeMode>absolute</altitudeMode>
+        <altitudeMode>${altitudeMode}</altitudeMode>
         <coordinates>${coordinates}</coordinates>
       </LineString>
     </Placemark>
@@ -151,7 +172,7 @@ const findNearestPoint = (latlng) => {
     }
   });
 
-  if (minDist > 24) return null;
+  if (minDist > 48) return null;
   return closest;
 };
 
@@ -162,7 +183,7 @@ const formatTooltip = (point) => {
   lines.push(`Battery: ${formatSoc(point.batterySoc)}`);
   lines.push(`Voltage: ${formatVoltage(point.batteryMv)}`);
 
-  if (point.homeLat != null && point.homeLon != null) {
+  if (point.homepointSet && point.homeLat != null && point.homeLon != null) {
     const distance = haversineMeters(point.lat, point.lon, point.homeLat, point.homeLon);
     const bearing = bearingDegrees(point.lat, point.lon, point.homeLat, point.homeLon);
     lines.push(`Home: ${distance.toFixed(1)} m @ ${bearing.toFixed(0)}°`);
@@ -193,6 +214,8 @@ const renderTrack = () => {
 const parseTelemetry = (rows) => {
   const parsed = rows
     .map((row) => {
+      if (!parseBoolean(row[columnKeys.gpsUsed])) return null;
+
       const lat = Number.isFinite(row[columnKeys.latDeg])
         ? row[columnKeys.latDeg]
         : toDegrees(row[columnKeys.latRad]);
@@ -205,6 +228,7 @@ const parseTelemetry = (rows) => {
         ? row[columnKeys.alt]
         : row[columnKeys.altHome];
 
+      const homepointSet = parseBoolean(row[columnKeys.homepointSet]);
       const homeLat = Number.isFinite(row[columnKeys.homeLatDeg])
         ? row[columnKeys.homeLatDeg]
         : toDegrees(row[columnKeys.homeLatRad]);
@@ -218,8 +242,9 @@ const parseTelemetry = (rows) => {
         alt: Number.isFinite(alt) ? alt : null,
         batterySoc: row[columnKeys.batterySoc],
         batteryMv: row[columnKeys.batteryMv],
-        homeLat: Number.isFinite(homeLat) ? homeLat : null,
-        homeLon: Number.isFinite(homeLon) ? homeLon : null,
+        homeLat: homepointSet && Number.isFinite(homeLat) ? homeLat : null,
+        homeLon: homepointSet && Number.isFinite(homeLon) ? homeLon : null,
+        homepointSet,
         timestamp: row[columnKeys.timestamp],
         timestampValue: row[columnKeys.timestamp] ? Date.parse(row[columnKeys.timestamp]) : null,
       };
@@ -275,14 +300,24 @@ map.on("mousemove", (event) => {
   const nearest = findNearestPoint(event.latlng);
 
   if (!nearest) {
-    tooltip.hidden = true;
+    if (hoverTooltip) {
+      map.removeLayer(hoverTooltip);
+      hoverTooltip = null;
+    }
     return;
   }
 
-  tooltip.hidden = false;
-  tooltip.innerHTML = formatTooltip(nearest);
-  tooltip.style.left = `${event.containerPoint.x}px`;
-  tooltip.style.top = `${event.containerPoint.y}px`;
+  if (!hoverTooltip) {
+    hoverTooltip = L.tooltip({
+      direction: "top",
+      offset: [0, -8],
+      opacity: 0.95,
+      className: "map-tooltip",
+      sticky: true,
+    }).addTo(map);
+  }
+
+  hoverTooltip.setLatLng([nearest.lat, nearest.lon]).setContent(formatTooltip(nearest));
 
   if (hoverMarker) {
     hoverMarker.setLatLng([nearest.lat, nearest.lon]);
@@ -290,7 +325,10 @@ map.on("mousemove", (event) => {
 });
 
 map.on("mouseout", () => {
-  tooltip.hidden = true;
+  if (hoverTooltip) {
+    map.removeLayer(hoverTooltip);
+    hoverTooltip = null;
+  }
 });
 
 exportButton.addEventListener("click", downloadKml);
