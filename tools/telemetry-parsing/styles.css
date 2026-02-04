@@ -135,6 +135,7 @@ button[disabled] {
   font-size: 0.85rem;
   line-height: 1.4;
   max-width: 240px;
+  z-index: 10;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 

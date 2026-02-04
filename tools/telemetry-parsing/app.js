@@ -34,6 +34,14 @@ const columnKeys = {
 };
 
 const toDegrees = (radians) => (Number.isFinite(radians) ? (radians * 180) / Math.PI : null);
+const parseBoolean = (value) => {
+  if (value === true || value === 1) return true;
+  if (typeof value === "string") {
+    const normalized = value.trim().toLowerCase();
+    return normalized === "true" || normalized === "1";
+  }
+  return false;
+};
 
 const formatSoc = (value) => {
   if (!Number.isFinite(value)) return "—";
@@ -153,7 +161,7 @@ const findNearestPoint = (latlng) => {
     }
   });
 
-  if (minDist > 24) return null;
+  if (minDist > 48) return null;
   return closest;
 };
 
@@ -195,8 +203,7 @@ const renderTrack = () => {
 const parseTelemetry = (rows) => {
   const parsed = rows
     .map((row) => {
-      const gpsUsed = row[columnKeys.gpsUsed];
-      if (gpsUsed !== true && gpsUsed !== 1) return null;
+      if (!parseBoolean(row[columnKeys.gpsUsed])) return null;
 
       const lat = Number.isFinite(row[columnKeys.latDeg])
         ? row[columnKeys.latDeg]
@@ -210,7 +217,7 @@ const parseTelemetry = (rows) => {
         ? row[columnKeys.alt]
         : row[columnKeys.altHome];
 
-      const homepointSet = row[columnKeys.homepointSet] === true || row[columnKeys.homepointSet] === 1;
+      const homepointSet = parseBoolean(row[columnKeys.homepointSet]);
       const homeLat = Number.isFinite(row[columnKeys.homeLatDeg])
         ? row[columnKeys.homeLatDeg]
         : toDegrees(row[columnKeys.homeLatRad]);
