@@ -43,6 +43,10 @@ SquirrelCast is an Android smartphone-based video-out solution for newer DJI gog
 
 - [Telemetry Parsing Tool](https://xnuclearsquirrel.github.io/SquirrelCast-Public/tools/telemetry-parsing/)
 
+## Support
+
+For questions join our discord [Squirrelcast](https://discord.gg/qUqNaEJNP)!
+
 ## Credits
 
 - Thanks to Joonas for the help when developing this! And of course, thanks to my testers who volunteered to test the app during development and offered much valuable feedback and suggestions!
