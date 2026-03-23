@@ -21,7 +21,7 @@ To rearrange the widget layout:
 
 Some widgets, such as **Map**, **Player**, and **Horizon**, can also be resized to span more or fewer slots. To resize them, long-press a corner and drag it.
 
-> **Note:** A short GIF of the editing process may be added here later.
+<img src="images/telemetry-tab-layout-editing.gif" alt="Editing the telemetry tab layout by moving, resizing, adding, and removing widgets" width="60%" />
 
 ### Widget details
 
@@ -52,6 +52,6 @@ The map overlay can be adjusted directly on screen:
 
 In the settings, the map can also be changed to a **semi-transparent** or **fully transparent** style. In fully transparent mode, only the track is shown.
 
-> **Note:** A short GIF showing the Player map overlay may be added here later.
+<img src="images/player-map-overlay.gif" alt="Player map overlay being opened, moved, and resized" width="60%" />
 
 The map overlay uses the same Google Maps SDK, the same map types, and the same shared cache as the Telemetry tab. This means you can preload an area in one view and it will already be available in the other.

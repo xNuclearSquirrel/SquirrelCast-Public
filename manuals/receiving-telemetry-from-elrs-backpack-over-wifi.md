@@ -101,7 +101,7 @@ If you only want telemetry in the app and do not need video streaming, a hotspot
 3. Look for the **ELRS** indicator at the top of the page.
 4. If the indicator is active and telemetry values start updating, telemetry is being received.
 
-<img src="images/elrs-telemetry-tab.png" alt="Telemetry tab showing the ELRS indicator at the top" width="40%" />
+<img src="images/elrs-telemetry-tab.png" alt="Telemetry tab showing the ELRS indicator at the top" width="52%" />
 
 The map will show a position only after the flight controller has a GPS fix.
 

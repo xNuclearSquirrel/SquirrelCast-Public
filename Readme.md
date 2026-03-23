@@ -2,15 +2,20 @@
 
 SquirrelCast is an Android smartphone-based video-out solution for newer DJI goggles (anything compatible with **O3** and **O4**).
 
-<img src="overview.jpg" alt="Banner image" width="600">
+<p float="left">
+  <img src="overview.jpg" alt="SquirrelCast overview" width="48%" />
+  <img src="telemetry-overview.png" alt="SquirrelCast telemetry overview" width="48%" />
+</p>
 
 ## What SquirrelCast Does
 
 - Connect your phone to the goggles via a **USB-C cable**
 - View **live video** inside the app
+- View **telemetry** in the app with configurable widgets, maps, and overlays
 - Record video directly to your phone  
   - Optional: enable audio from your phone’s microphone (great for commentary)
 - Change camera settings on the air unit or DJI drone directly from the app
+- Receive telemetry from supported **DJI drones** or from the **ELRS backpack over Wi-Fi**
 - Stream live video over your local network to other devices:
   - Share to a web browser via **WebRTC**, no additional software needed
   - Share via **RTSP** to third-party apps such as **VLC**, and ground stations such as **ArduPilot Mission Planner**

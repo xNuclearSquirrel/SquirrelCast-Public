@@ -9,6 +9,6 @@ Supported DJI drones include:
 
 If telemetry is being received, the **DJI telemetry** indicator at the top of the Telemetry tab will show that it is active.
 
-<img src="images/dji-telemetry-tab.png" alt="Telemetry tab showing the DJI telemetry indicator at the top" width="22%" />
+<img src="images/dji-telemetry-tab.png" alt="Telemetry tab showing the DJI telemetry indicator at the top" width="68%" />
 
 If you are using a DJI air unit instead of a DJI drone, see [Receiving telemetry from the ELRS backpack over Wi-Fi](receiving-telemetry-from-elrs-backpack-over-wifi.md).
