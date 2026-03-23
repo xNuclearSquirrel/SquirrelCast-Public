@@ -39,7 +39,12 @@ SquirrelCast is an Android smartphone-based video-out solution for newer DJI gog
   - [Set up Live Video in Mission Planner](manuals/streaming-over-wifi.md#set-up-live-video-in-ardupilot-mission-planner)
   - [Stream directly from goggles to Windows using SquirrelReceiver](manuals/streaming-over-wifi.md#stream-directly-from-the-goggles-to-windows-using-squirrelreceiver)
 
-- [Telemetry Logging](manuals/telemetry-logging.md)
+- [Telemetry](manuals/telemetry.md)
+  - [Receiving telemetry from DJI drones](manuals/receiving-telemetry-from-dji-drones.md)
+  - [Receiving telemetry from the ELRS backpack over Wi-Fi](manuals/receiving-telemetry-from-elrs-backpack-over-wifi.md)
+  - [Viewing telemetry in the app](manuals/viewing-telemetry-in-the-app.md)
+  - [Viewing telemetry in the Web UI](manuals/viewing-telemetry-in-the-webui.md)
+  - [Telemetry Logging](manuals/telemetry-logging.md)
 
 ## Additional Tools
 
