@@ -55,3 +55,14 @@ In the settings, the map can also be changed to a **semi-transparent** or **full
 <img src="images/player-map-overlay.gif" alt="Player map overlay being opened, moved, and resized" width="60%" />
 
 The map overlay uses the same Google Maps SDK, the same map types, and the same shared cache as the Telemetry tab. This means you can preload an area in one view and it will already be available in the other.
+
+## Clean video (no OSD)
+
+Because the Telemetry tab and the Player map overlay already show most of the important information, it often makes sense to turn off the OSD in the video feed and use a clean video image instead.
+
+To do that, follow the goggles setting described in [Clean video feed (no MSP OSD)](streaming-over-wifi.md#clean-video-feed-no-msp-osd).
+
+<p float="left">
+  <img src="images/telemetry-tab-clean-video.png" alt="Telemetry tab used together with a clean video feed without OSD" width="48%" />
+  <img src="images/player-map-overlay-clean-video.png" alt="Player map overlay used together with a clean video feed without OSD" width="48%" />
+</p>

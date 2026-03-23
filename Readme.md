@@ -3,8 +3,8 @@
 SquirrelCast is an Android smartphone-based video-out solution for newer DJI goggles (anything compatible with **O3** and **O4**).
 
 <p float="left">
-  <img src="overview.jpg" alt="SquirrelCast overview" width="48%" />
-  <img src="telemetry-overview.png" alt="SquirrelCast telemetry overview" width="48%" />
+  <img src="overview.jpg" alt="SquirrelCast overview" height="240" />
+  <img src="telemetry-overview.png" alt="SquirrelCast telemetry overview" height="240" />
 </p>
 
 ## What SquirrelCast Does

@@ -2,6 +2,8 @@
 
 Telemetry can also be shown in the browser-based Web UI while streaming video over Wi-Fi.
 
+<img src="images/webui-telemetry-demo.gif" alt="Web UI telemetry demo showing the browser map and telemetry overlays" width="60%" />
+
 ## Enable Web telemetry export
 
 1. Open **Settings** in SquirrelCast.
@@ -23,5 +25,3 @@ There is also a setting called **Allow map pan and zoom**.
 By default, the map in the Web UI is fixed and follows the aircraft. If **Allow map pan and zoom** is enabled, the user can move and zoom the map manually in the browser.
 
 This causes even more map loading, so it is even more likely to introduce video lag. It is best to test this in your own setup and only leave it enabled if the performance is still acceptable.
-
-<img src="images/webui-telemetry-demo.gif" alt="Web UI telemetry demo showing the browser map and telemetry overlays" width="60%" />
