@@ -16,9 +16,10 @@ At the time of writing, this feature is available on the `master` branch and is 
 1. Open **ExpressLRS Configurator**.
 2. Open **Settings** and enable **Expert Mode**.
 3. Select **Backpack** in the left-side menu.
-4. Set the Backpack Home Wi-Fi **SSID** and **password** to your home network or phone hotspot.
-5. Change **Git branches** to `master`.
-6. Flash that build to the backpack.
+4. Change **Git branches** to `master`.
+5. Select your TX backpack target.
+6. Set the Backpack Home Wi-Fi **SSID** and **password** to your home network or phone hotspot.
+7. Flash that build to the backpack.
 
 <p float="left">
   <img src="images/elrs-expert-mode.png" alt="ExpressLRS Configurator with Expert Mode enabled" width="35%" />
@@ -30,10 +31,10 @@ As an alternative, you can also use the official ExpressLRS Web Flasher:
 
 In the Web Flasher:
 1. Click **Transmitter Module**.
-2. Select your TX backpack target.
-3. Set the Backpack Home Wi-Fi **SSID** and **password** to your home network or phone hotspot.
-4. Enable the **Branches** toggle.
-5. Select the `master` branch.
+2. Enable the **Branches** toggle.
+3. Select the `master` branch.
+4. Select your TX backpack target.
+5. Set the Backpack Home Wi-Fi **SSID** and **password** to your home network or phone hotspot.
 6. Flash the backpack.
 
 <img src="images/elrs-web-flasher-master-branch.png" alt="ExpressLRS Web Flasher showing Transmitter Module with Branches enabled and master selected" width="60%" />
@@ -100,7 +101,7 @@ If you only want telemetry in the app and do not need video streaming, a hotspot
 3. Look for the **ELRS** indicator at the top of the page.
 4. If the indicator is active and telemetry values start updating, telemetry is being received.
 
-<img src="images/elrs-telemetry-tab.png" alt="Telemetry tab showing the ELRS indicator at the top" width="22%" />
+<img src="images/elrs-telemetry-tab.png" alt="Telemetry tab showing the ELRS indicator at the top" width="40%" />
 
 The map will show a position only after the flight controller has a GPS fix.
 
@@ -115,11 +116,11 @@ If you want to use a custom port:
 3. Use `http://elrs_txbp.local/` when connected through Home Wi-Fi or hotspot, or `http://10.0.0.1/` when connected directly to the backpack AP.
 4. Open the **MAVLink** tab.
 5. Change **SendPort** to the port you want to use.
-6. In SquirrelCast, open **Settings** and change the **ELRS listen port** to the same value.
+6. In SquirrelCast, open **Settings** and change **ELRS telemetry port** to the same value.
 
 <p float="left">
-  <img src="images/elrs-backpack-sendport.png" alt="ELRS backpack web UI showing the SendPort setting" width="48%" />
-  <img src="images/elrs-listen-port-setting.png" alt="SquirrelCast settings showing the ELRS listen port option" width="22%" />
+  <img src="images/elrs-backpack-sendport.png" alt="ELRS backpack web UI showing the SendPort setting" height="320" />
+  <img src="images/elrs-listen-port-setting.png" alt="SquirrelCast settings showing the ELRS telemetry port option" height="320" />
 </p>
 
 ## Current protocol support
