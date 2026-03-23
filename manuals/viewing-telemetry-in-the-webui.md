@@ -14,6 +14,8 @@ Telemetry can also be shown in the browser-based Web UI while streaming video ov
 
 When this setting is enabled, the Web UI can show telemetry overlays such as the **map** and certain **stats** together with the live video.
 
+Telemetry export is independent of the current app tab. You can switch tabs, minimize the app, or lock the phone, and telemetry streaming will continue.
+
 If the setting is disabled, the browser stream contains **video only**.
 
 > **Warning:** Showing telemetry in the Web UI can increase video lag, especially if the receiving device is sharing an internet connection with the phone. If low latency matters more than telemetry, leave **Web telemetry export** turned off.
