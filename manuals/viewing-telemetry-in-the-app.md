@@ -41,7 +41,7 @@ The map cache is shared between the **Telemetry** tab and the **Player**, so if 
 
 ## Map overlay in the Player
 
-The **Player** can also show telemetry directly over the live video, including the map overlay.
+The **Player** can also show telemetry directly over the live video, using a map overlay.
 
 As soon as a valid position is received from telemetry, a **map** icon appears in the bottom left of the Player. Tapping it opens the map overlay.
 
