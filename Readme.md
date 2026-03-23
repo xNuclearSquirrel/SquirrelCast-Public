@@ -2,15 +2,20 @@
 
 SquirrelCast is an Android smartphone-based video-out solution for newer DJI goggles (anything compatible with **O3** and **O4**).
 
-<img src="overview.jpg" alt="Banner image" width="600">
+<p float="left">
+  <img src="overview.jpg" alt="SquirrelCast overview" height="240" />
+  <img src="telemetry-overview.png" alt="SquirrelCast telemetry overview" height="240" />
+</p>
 
 ## What SquirrelCast Does
 
 - Connect your phone to the goggles via a **USB-C cable**
 - View **live video** inside the app
+- View **telemetry** in the app with configurable widgets, maps, and overlays
 - Record video directly to your phone  
   - Optional: enable audio from your phone’s microphone (great for commentary)
 - Change camera settings on the air unit or DJI drone directly from the app
+- Receive telemetry from supported **DJI drones** or from the **ELRS backpack over Wi-Fi**
 - Stream live video over your local network to other devices:
   - Share to a web browser via **WebRTC**, no additional software needed
   - Share via **RTSP** to third-party apps such as **VLC**, and ground stations such as **ArduPilot Mission Planner**
@@ -39,7 +44,12 @@ SquirrelCast is an Android smartphone-based video-out solution for newer DJI gog
   - [Set up Live Video in Mission Planner](manuals/streaming-over-wifi.md#set-up-live-video-in-ardupilot-mission-planner)
   - [Stream directly from goggles to Windows using SquirrelReceiver](manuals/streaming-over-wifi.md#stream-directly-from-the-goggles-to-windows-using-squirrelreceiver)
 
-- [Telemetry Logging](manuals/telemetry-logging.md)
+- [Telemetry](manuals/telemetry.md)
+  - [Receiving telemetry from DJI drones](manuals/receiving-telemetry-from-dji-drones.md)
+  - [Receiving telemetry from the ELRS backpack over Wi-Fi](manuals/receiving-telemetry-from-elrs-backpack-over-wifi.md)
+  - [Viewing telemetry in the app](manuals/viewing-telemetry-in-the-app.md)
+  - [Viewing telemetry in the Web UI](manuals/viewing-telemetry-in-the-webui.md)
+  - [Telemetry Logging](manuals/telemetry-logging.md)
 
 ## Additional Tools
 
