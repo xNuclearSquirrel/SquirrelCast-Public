@@ -86,7 +86,7 @@ This is the most convenient option if you want the backpack to join your hotspot
 ### Option 2: Connect directly to the backpack access point
 
 1. Leave the hotspot off, or power up where the configured Home Wi-Fi is not available.
-2. Power up the backpack.
+2. Power up the radio.
 3. Connect the phone or tablet to the Wi-Fi network `ExpressLRS TX Backpack XXXXXX`.
 4. Use the password `expresslrs`.
 
