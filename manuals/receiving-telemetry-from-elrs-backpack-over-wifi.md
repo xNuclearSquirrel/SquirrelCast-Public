@@ -78,7 +78,7 @@ When `Telemetry` is set to `WiFi`, the backpack starts Wi-Fi automatically.
 
 1. Set the Backpack Home Wi-Fi **SSID** and **password** when flashing.
 2. Turn on your phone hotspot or use the same local Wi-Fi network.
-3. Power up the backpack.
+3. Power up the radio.
 4. The backpack should connect automatically.
 
 This is the most convenient option if you want the backpack to join your hotspot as soon as it powers on.
