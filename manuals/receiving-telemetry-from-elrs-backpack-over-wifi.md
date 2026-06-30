@@ -11,15 +11,14 @@ It is recommended to set the Backpack Home Wi-Fi **SSID** and **password** to ma
 
 ## Flash the master branch
 
-At the time of writing, this feature is available on the `master` branch and is not yet part of the stable Backpack release used for this guide. To use it now, flash the newest `master` build to the TX backpack.
+~~At the time of writing, this feature is available on the `master` branch and is not yet part of the stable Backpack release used for this guide. To use it now, flash the newest `master` build to the TX backpack.~~ The feature has been merged and is present in the ERLS Backpack versions  ```>1.5.7```!
 
 1. Open **ExpressLRS Configurator**.
-2. Open **Settings** and enable **Expert Mode**.
-3. Select **Backpack** in the left-side menu.
-4. Change **Git branches** to `master`.
-5. Select your TX backpack target.
-6. Set the Backpack Home Wi-Fi **SSID** and **password** to your home network or phone hotspot.
-7. Flash that build to the backpack.
+2. Select **Backpack** in the left-side menu.\
+3. Select Firmware version ```1.5.7``` or greater.
+4. Select your TX backpack target.
+5. Set the Backpack Home Wi-Fi **SSID** and **password** to your home network or phone hotspot.
+6. Flash that build to the backpack.
 
 <p float="left">
   <img src="images/elrs-expert-mode.png" alt="ExpressLRS Configurator with Expert Mode enabled" width="35%" />
@@ -31,11 +30,10 @@ As an alternative, you can also use the official ExpressLRS Web Flasher:
 
 In the Web Flasher:
 1. Click **Transmitter Module**.
-2. Enable the **Branches** toggle.
-3. Select the `master` branch.
-4. Select your TX backpack target.
-5. Set the Backpack Home Wi-Fi **SSID** and **password** to your home network or phone hotspot.
-6. Flash the backpack.
+2. Select Firmware version ```1.5.7``` or greater.
+3. Select your TX backpack target.
+4. Set the Backpack Home Wi-Fi **SSID** and **password** to your home network or phone hotspot.
+5. Flash the backpack.
 
 <img src="images/elrs-web-flasher-master-branch.png" alt="ExpressLRS Web Flasher showing Transmitter Module with Branches enabled and master selected" width="60%" />
 
