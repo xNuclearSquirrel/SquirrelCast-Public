@@ -11,7 +11,8 @@ It is recommended to set the Backpack Home Wi-Fi **SSID** and **password** to ma
 
 ## Flash the master branch
 
-~~At the time of writing, this feature is available on the `master` branch and is not yet part of the stable Backpack release used for this guide. To use it now, flash the newest `master` build to the TX backpack.~~ The feature has been merged and is present in the ERLS Backpack versions  ```>1.5.7```!
+~~At the time of writing, this feature is available on the `master` branch and is not yet part of the stable Backpack release used for this guide. To use it now, flash the newest `master` build to the TX backpack.~~ 
+The feature has been merged and is present in the ERLS Backpack versions  ```>1.5.7```!
 
 1. Open **ExpressLRS Configurator**.
 2. Select **Backpack** in the left-side menu.\
