@@ -9,36 +9,34 @@ It is recommended to set the Backpack Home Wi-Fi **SSID** and **password** to ma
 - automatic connection to your phone hotspot or home network
 - direct connection to the backpack's own Wi-Fi access point
 
-## Flash the master branch
+## Flash Backpack firmware `1.5.7` or newer
 
-~~At the time of writing, this feature is available on the `master` branch and is not yet part of the stable Backpack release used for this guide. To use it now, flash the newest `master` build to the TX backpack.~~ 
-The feature has been merged and is present in the ERLS Backpack versions  ```>1.5.7```!
+The feature has been merged and is present in ExpressLRS Backpack `1.5.7` or newer.
 
 1. Open **ExpressLRS Configurator**.
-2. Select **Backpack** in the left-side menu.\
-3. Select Firmware version ```1.5.7``` or greater.
+2. Select **Backpack** in the left-side menu.
+3. Select firmware version `1.5.7` or newer.
 4. Select your TX backpack target.
 5. Set the Backpack Home Wi-Fi **SSID** and **password** to your home network or phone hotspot.
 6. Flash that build to the backpack.
-
-<p float="left">
-  <img src="images/elrs-expert-mode.png" alt="ExpressLRS Configurator with Expert Mode enabled" width="35%" />
-  <img src="images/elrs-master-branch.png" alt="ExpressLRS Configurator with the Backpack Git branch set to master" width="35%" />
-</p>
 
 As an alternative, you can also use the official ExpressLRS Web Flasher:  
 [https://expresslrs.github.io/web-flasher/](https://expresslrs.github.io/web-flasher/)
 
 In the Web Flasher:
 1. Click **Transmitter Module**.
-2. Select Firmware version ```1.5.7``` or greater.
+2. Select firmware version `1.5.7` or newer.
 3. Select your TX backpack target.
 4. Set the Backpack Home Wi-Fi **SSID** and **password** to your home network or phone hotspot.
 5. Flash the backpack.
 
-<img src="images/elrs-web-flasher-master-branch.png" alt="ExpressLRS Web Flasher showing Transmitter Module with Branches enabled and master selected" width="60%" />
+### If the backpack does not connect
 
-> **Note:** This page should be updated once a Backpack release includes this change.
+A patch for some ESP32-C3 based TX backpack targets has been merged into Backpack `master`, but it is not included in Backpack `1.5.7`. On affected targets, setting **Telemetry** to `WiFi` may not make the backpack start or connect to Wi-Fi.
+
+If this happens, either flash the current `master` branch or use the short-term workaround: set **Link Mode** to `MAVLink`, set **Telemetry** to `WiFi`, wait for Wi-Fi to start, then set **Link Mode** back to `Normal`. The workaround needs to be repeated after power cycling.
+
+For the full `master` flashing flow and a more detailed explanation, see [ELRS Backpack C3 Wi-Fi telemetry troubleshooting](elrs-backpack-c3-wifi-telemetry-troubleshooting.md).
 
 ## Enable Wi-Fi telemetry in the ELRS Lua script
 
